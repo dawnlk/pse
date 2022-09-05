@@ -1,0 +1,2755 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://data.open.ac.uk/ontology/pse#"
+     xml:base="http://data.open.ac.uk/ontology/pse"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pse="http://data.open.ac.uk/ontology/pse#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://data.open.ac.uk/ontology/pse">
+        <owl:versionIRI rdf:resource="http://data.open.ac.uk/ontology/pse/0.3.3"/>
+        <rdfs:comment>Work in progress.
+
+Part of the PhD research project: &apos;Collecting and connecting portrait-sittings: a re-evaluation of portrait-sitting accounts in enhancing knowledge and understanding of British portraiture 1900-1960&apos;
+
+https://portrait-sitting.co.uk/
+https://fass.open.ac.uk/people/dlk65</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#anticipatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#anticipatedBy">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#anticipates"/>
+        <rdfs:label>anticipated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#anticipates -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#anticipates">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#AgentRole"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#AnticipatedEvent"/>
+        <rdfs:label>anticipates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#borrows -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#borrows">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#receives"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#lentTo"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Borrower"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#LoanRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#buys -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#buys">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#receives"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#soldTo"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Buyer"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PurchaseRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#derivativeOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#derivativeOf">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasVersion"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasDerivative"/>
+        <rdfs:label>derivative of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#describedIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#describedIn">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#describes"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitProduction"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitSittingAccount"/>
+        <rdfs:label>described in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#describes -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#describes"/>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#determinedBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#determinedBy">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#determines"/>
+        <rdfs:label>determined by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#determinedPartiallyBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#determinedPartiallyBy">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#determinedBy"/>
+        <rdfs:label>determined partially by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#determinedSolelyBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#determinedSolelyBy">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#determinedBy"/>
+        <rdfs:label>determined solely by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#determines -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#determines">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#AgentRole"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Factor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#engagedTo -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#engagedTo">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasSocialConnectionTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:label>engaged to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#feels -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#feels">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#feltBy"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Feeling"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#feltBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#feltBy">
+        <rdfs:label>felt by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#genderIdentityOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#genderIdentityOf">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasGenderIdentity"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#GenderIdentity"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:label>gender identity of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#giftedBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#giftedBy">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#givenBy"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#gifts"/>
+        <rdfs:label>gifted by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#giftedTo -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#giftedTo">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#receivedBy"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#isGifted"/>
+        <rdfs:label>gifted to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#gifts -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#gifts">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#gives"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#GiftGiver"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#GiftRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#givenBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#givenBy">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#gives"/>
+        <rdfs:label>given by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#gives -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#gives">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Giver"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Commodity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#happensAfter -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#happensAfter">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#happensBefore"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:label>happens after</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#happensBefore -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#happensBefore">
+        <rdfs:label>happens before</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#happensDuring -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#happensDuring">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasSubEvent"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:label>happens during</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasChild -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasChild">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasSocialConnectionTo"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasParent"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:label>has child</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasColourPalette -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasColourPalette">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#ColourPalette"/>
+        <rdfs:label>has colour palette</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasCompanion -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasCompanion">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasRelated"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitObject"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitObject"/>
+        <rdfs:label>has companion portrait</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasConditionState -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasConditionState">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Object"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#ConditionState"/>
+        <rdfs:label>has condition state</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasDerivative -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasDerivative">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasVersion"/>
+        <rdfs:label>has derivative</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasFinishedState -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasFinishedState">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#FinishedState"/>
+        <rdfs:label>has finished state</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasFriend -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasFriend">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasSocialConnectionTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:label>has friend</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasGenderIdentity -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasGenderIdentity">
+        <rdfs:label>has gender identity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasMarkMakingStyle -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasMarkMakingStyle">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#markMakingStyleOf"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#MarkMakingStyle"/>
+        <rdfs:label>has mark-making style</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasMedium -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasMedium">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#mediumOf"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Medium"/>
+        <rdfs:label>has medium</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasMember">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#memberOf"/>
+        <rdfs:label>has member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasOccupation -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasOccupation">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#occupationOf"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Occupation"/>
+        <rdfs:label>has occupation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasParent -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasParent">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasSocialConnectionTo"/>
+        <rdfs:label>has parent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasPortraitObject -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasPortraitObject">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#includes"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#portraitObjectIn"/>
+        <rdfs:label>has portrait object</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasPortraitProduction -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasPortraitProduction">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#includes"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#portraitProductionIn"/>
+        <rdfs:label>has portrait production</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasPortraitSittingAccount -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasPortraitSittingAccount">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#includes"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#portraitSittingAccountIn"/>
+        <rdfs:label>has portrait-sitting account</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasRelated -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasRelated">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:label>has related</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasReplica -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasReplica">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasDerivative"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#replicaOf"/>
+        <rdfs:label>has replica</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasReproduction -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasReproduction">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasDerivative"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#reproductionOf"/>
+        <rdfs:label>has reproduction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasRole">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#roleIn"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:label>has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasSocialConnectionTo -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasSocialConnectionTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:label>has social connection to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasSocioEconomicGroup -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasSocioEconomicGroup">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#socioEconomicGroupOf"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#SocioEconomicGroup"/>
+        <rdfs:label>has socio-economic group</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasSource -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasSource">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#sourceOf"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitSittingAccount"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#LiteraryWork"/>
+        <rdfs:label>has source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasSpouse -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasSpouse">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#hasSocialConnectionTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:label>has spouse</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasStudy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasStudy">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:label>has study</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasSubEvent -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasSubEvent">
+        <rdfs:label>has sub-event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasToGive -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasToGive">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#gives"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PotentialGiver"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PotentialCommodity"/>
+        <rdfs:label>has (to give)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasVersion -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasVersion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:label>has version</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#heldBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#heldBy">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#holds"/>
+        <rdfs:label>held by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#holds -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#holds">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#AgentRole"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Opinion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#inWhichSituated -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#inWhichSituated">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#situatedIn"/>
+        <rdfs:label>in which situated</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#includedIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#includedIn">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#includes"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitSittingRecord"/>
+        <rdfs:label>included in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#includes -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#includes"/>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#isGifted -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#isGifted">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#receives"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#GiftRecipient"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#GiftRole"/>
+        <rdfs:label>is gifted</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#knownAboutBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#knownAboutBy">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#knowsAbout"/>
+        <rdfs:label>known about by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#knowsAbout -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#knowsAbout">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:label>knows about (has knowledge of)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#lends -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#lends">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#gives"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#lentBy"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Lender"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#LoanRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#lentBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#lentBy">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#givenBy"/>
+        <rdfs:label>lent by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#lentTo -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#lentTo">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#receivedBy"/>
+        <rdfs:label>lent to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#markMakingStyleOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#markMakingStyleOf">
+        <rdfs:label>mark-making style of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#mediumOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#mediumOf">
+        <rdfs:label>medium of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#memberOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#memberOf">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Person"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Group"/>
+        <rdfs:label>member of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#occupationOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#occupationOf">
+        <rdfs:label>occupation of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#partiallyDetermines -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#partiallyDetermines">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#determines"/>
+        <rdfs:label>partially determines</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#playedAtypicallyBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#playedAtypicallyBy">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#playedBy"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#playsAtypically"/>
+        <rdfs:label>played atypically by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#playedBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#playedBy">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#plays"/>
+        <rdfs:label>played by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#playedIrreplaceablyBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#playedIrreplaceablyBy">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#playedBy"/>
+        <rdfs:label>played irreplaceably by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#playedKnowinglyBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#playedKnowinglyBy">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#playedBy"/>
+        <rdfs:label>played knowingly by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#playedTypicallyBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#playedTypicallyBy">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#playedBy"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#playsTypically"/>
+        <rdfs:label>played typically by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#playedUnknowinglyBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#playedUnknowinglyBy">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#playedBy"/>
+        <rdfs:label>played unknowingly by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#plays -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#plays">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://data.open.ac.uk/ontology/pse#Event"/>
+                    <rdf:Description rdf:about="http://data.open.ac.uk/ontology/pse#Object"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#playsAtypically -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#playsAtypically">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#plays"/>
+        <rdfs:label>plays atypically</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#playsIrreplaceably -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#playsIrreplaceably">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#plays"/>
+        <rdfs:label>plays irreplaceably</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#playsKnowingly -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#playsKnowingly">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#plays"/>
+        <rdfs:label>plays knowingly</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#playsTypically -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#playsTypically">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#plays"/>
+        <rdfs:label>plays typically</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#playsUnknowingly -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#playsUnknowingly">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#plays"/>
+        <rdfs:label>plays unknowingly</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#portraitObjectIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#portraitObjectIn">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#includedIn"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitObject"/>
+        <rdfs:label>portrait object in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#portraitProductionIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#portraitProductionIn">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#includedIn"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitProduction"/>
+        <rdfs:label>portrait production in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#portraitSittingAccountIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#portraitSittingAccountIn">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#includedIn"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitSittingAccount"/>
+        <rdfs:label>portrait-sitting account in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#promptedBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#promptedBy">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#prompts"/>
+        <rdfs:label>prompted by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#prompts -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#prompts">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#realisationOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#realisationOf">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#realisedIn"/>
+        <rdfs:label>realisation of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#realisedIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#realisedIn">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#AnticipatedEvent"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#RealisedEvent"/>
+        <rdfs:label>realised in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#receivedBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#receivedBy">
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#receives"/>
+        <rdfs:label>received by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#receives -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#receives">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Recipient"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Commodity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#replicaOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#replicaOf">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#derivativeOf"/>
+        <rdfs:label>replica of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#reproductionOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#reproductionOf">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#derivativeOf"/>
+        <rdfs:label>reproduction of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#roleIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#roleIn">
+        <rdfs:label>role in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#sells -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#sells">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#gives"/>
+        <owl:inverseOf rdf:resource="http://data.open.ac.uk/ontology/pse#soldBy"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Seller"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PurchaseRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#situatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#situatedIn">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Space"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#Space"/>
+        <rdfs:label>situated in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#socioEconomicGroupOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#socioEconomicGroupOf">
+        <rdfs:label>socio-economic group of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#soldBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#soldBy">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#givenBy"/>
+        <rdfs:label>sold by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#soldTo -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#soldTo">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#receivedBy"/>
+        <rdfs:label>sold to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#solelyDetermines -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#solelyDetermines">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#determines"/>
+        <rdfs:label>solely determines</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#sourceOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#sourceOf">
+        <rdfs:label>source of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#standsToReceive -->
+
+    <owl:ObjectProperty rdf:about="http://data.open.ac.uk/ontology/pse#standsToReceive">
+        <rdfs:subPropertyOf rdf:resource="http://data.open.ac.uk/ontology/pse#receives"/>
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PotentialRecipient"/>
+        <rdfs:range rdf:resource="http://data.open.ac.uk/ontology/pse#PotentialCommodity"/>
+        <rdfs:label>stands to receive</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasApproxAgeInYears -->
+
+    <owl:DatatypeProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasApproxAgeInYears">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PersonRole"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>has approx. age (in years)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasApproxNumberOfSittings -->
+
+    <owl:DatatypeProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasApproxNumberOfSittings">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitProduction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>has approx. number of sittings</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasApproxSittingDurationInHours -->
+
+    <owl:DatatypeProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasApproxSittingDurationInHours">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitProduction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>has approx. duration of each sitting (in hours)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasApproxTotalSittingDurationInHours -->
+
+    <owl:DatatypeProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasApproxTotalSittingDurationInHours">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitProduction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>has approx. total duration of sittings (in hours)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasDepthInMm -->
+
+    <owl:DatatypeProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasDepthInMm">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Sculpture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>has depth (in mm)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasDiameterInMm -->
+
+    <owl:DatatypeProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasDiameterInMm">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#Medal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>has diameter (in mm)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasHeightInMm -->
+
+    <owl:DatatypeProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasHeightInMm">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>has height (in mm)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasText -->
+
+    <owl:DatatypeProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasText">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitSittingAccount"/>
+        <rdfs:label>has text</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#hasWidthInMm -->
+
+    <owl:DatatypeProperty rdf:about="http://data.open.ac.uk/ontology/pse#hasWidthInMm">
+        <rdfs:domain rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>has width (in mm)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Acquisition -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Acquisition">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event in which something is acquired.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Actor -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Actor">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>Acts in portrait production.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Agent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Agent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Object"/>
+        <rdfs:comment>Is capable of making meaningful decisions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#AgentRole -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#AgentRole">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>The perdurant agent.</rdfs:comment>
+        <rdfs:label>Agent Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#AgreeingParty -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#AgreeingParty">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>Agrees to a term or terms in an agreement.</rdfs:comment>
+        <rdfs:label>Agreeing Party</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Agreement -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Agreement">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event in which at least two parties agree to something.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#AmountOfTime -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#AmountOfTime">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Asset"/>
+        <rdfs:comment>A portion of time, for example, 3 hours, 1 day.</rdfs:comment>
+        <rdfs:label>Amount of time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#AnticipatedEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#AnticipatedEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#SubjectiveEvent"/>
+        <rdfs:comment>An event that is expected to take place.</rdfs:comment>
+        <rdfs:label>Anticipated Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#AnticipatedRole -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#AnticipatedRole">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://data.open.ac.uk/ontology/pse#Role"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://data.open.ac.uk/ontology/pse#roleIn"/>
+                        <owl:someValuesFrom rdf:resource="http://data.open.ac.uk/ontology/pse#AnticipatedEvent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A role in an event that is expected to take place.</rdfs:comment>
+        <rdfs:label>Anticipated Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#ArtEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#ArtEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event that is relevant to the domain of art.</rdfs:comment>
+        <rdfs:label>Art Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#ArtObject -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#ArtObject">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Object"/>
+        <rdfs:comment>A particular art object, for example, a bust in the NPG.</rdfs:comment>
+        <rdfs:label>Art Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Artist -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Artist">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#GivenRole"/>
+        <rdfs:comment>The named artist of an artwork.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Asset -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Asset">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Object"/>
+        <rdfs:comment>Something of value.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Author -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Author">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>The named author of a literary work.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Autobiography -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Autobiography">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#LiteraryWork"/>
+        <rdfs:comment>A literary work that tells the life story of its author.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Biography -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Biography">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#LiteraryWork"/>
+        <rdfs:comment>A literary work that tells a person’s life story.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Borrower -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Borrower">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Recipient"/>
+        <rdfs:comment>Borrows something.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Building -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Building">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Bust -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Bust">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Sculpture"/>
+        <rdfs:comment>A sculpture that represents a head, or head and shoulders.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Buyer -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Buyer">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Recipient"/>
+        <rdfs:comment>Buys something.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Catalogue -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Catalogue">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#LiteraryWork"/>
+        <rdfs:comment>A literary work that tells a reader about the objects in an exhibition or collection.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#City -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#City">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Coat -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Coat">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Garment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#ColourPalette -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#ColourPalette">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#InformationObject"/>
+        <rdfs:comment>Describes the tonal character of an art object.</rdfs:comment>
+        <rdfs:label>Colour Palette</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Commission -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Commission">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Agreement"/>
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#External"/>
+        <rdfs:comment>An agreement to produce a portrait in exchange for money.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Commodity -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Commodity">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>Is given and received.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#ConditionState -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#ConditionState">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#InformationObject"/>
+        <rdfs:comment>Describes the condition of an art object, for example, whether it exists, is lost or has been destroyed.</rdfs:comment>
+        <rdfs:label>Condition State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Conversation -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Conversation">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Exchange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Correspondence -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Correspondence">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Exchange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Cost -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Cost">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Logistics"/>
+        <rdfs:comment>The monetary cost of portrait production.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Costume -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Costume">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Factor"/>
+        <rdfs:comment>An outfit.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#CostumeInEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#CostumeInEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Costume"/>
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Logistics"/>
+        <rdfs:comment>An outfit worn in an event.</rdfs:comment>
+        <rdfs:label>Costume (in Event)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#CostumeInPicture -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#CostumeInPicture">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Costume"/>
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Design"/>
+        <rdfs:comment>An outfit worn in a portrait.</rdfs:comment>
+        <rdfs:label>Costume (in Picture)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#CredibleAuthor -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#CredibleAuthor">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Author"/>
+        <rdfs:comment>A reputable and reliable author.</rdfs:comment>
+        <rdfs:label>Credible Author</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#DecisionMaker -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#DecisionMaker">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Actor"/>
+        <rdfs:comment>Makes decisions during portrait production.</rdfs:comment>
+        <rdfs:label>Decision-Maker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Design -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Design">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Factor"/>
+        <rdfs:comment>A factor that affects the appearance and materiality of the portrait.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Designer -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Designer">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#DecisionMaker"/>
+        <rdfs:comment>Determines (part of) the appearance and materiality of the portrait.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Drawing -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Drawing">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:comment>An art object made by marking a surface with pen, pencil, chalk etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Dress -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Dress">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Garment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#EssentialRole -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#EssentialRole">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>A role, without which an event (or a recognisable version of that event) could not take place.</rdfs:comment>
+        <rdfs:label>Essential Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Event -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Event">
+        <owl:disjointWith rdf:resource="http://data.open.ac.uk/ontology/pse#Object"/>
+        <owl:disjointWith rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>An activity, or series of activities, which happens in time and space.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Exchange -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Exchange">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event in which something is given and received, reciprocally.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Expertise -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Expertise">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Asset"/>
+        <rdfs:comment>Knowledge in a domain.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#External -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#External">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitInception"/>
+        <rdfs:comment>An event in which someone requests to produce a portrait.</rdfs:comment>
+        <rdfs:label>External (Request)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Factor -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Factor">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>An aspect of portrait production about which decisions are made.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Feeling -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Feeling">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#SubjectiveEvent"/>
+        <rdfs:comment>An emotional state.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#FinancialEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#FinancialEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event that is relevant to the domain of finance.</rdfs:comment>
+        <rdfs:label>Financial Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#FinishedState -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#FinishedState">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#InformationObject"/>
+        <rdfs:comment>Describes whether a portrait object appears to be, or is thought to have been, completed.</rdfs:comment>
+        <rdfs:label>Finished State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#FormatFigure -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#FormatFigure">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#InformationObject"/>
+        <rdfs:comment>A standard way of describing the size of the portrait object with reference to how much of the subject’s body is represented.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#FormatOrSize -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#FormatOrSize">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Design"/>
+        <rdfs:comment>The variable that is the format or size of the portrait, as decided during portrait production.</rdfs:comment>
+        <rdfs:label>Format or Size</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#FormatSize -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#FormatSize">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#InformationObject"/>
+        <rdfs:comment>A standard way of describing the size of the portrait object with reference to the dimensions of the canvas. See https://www.npg.org.uk/research/programmes/artists-their-materials-and-suppliers/three-quarters-kit-cats-and-half-lengths-british-portrait-painters-and-their-canvas-sizes-1625-1850/2.-four-historic-sizes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Funder -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Funder">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Support"/>
+        <rdfs:comment>Pays for part or all of portrait production.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Garment -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Garment">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Object"/>
+        <rdfs:comment>A particular item of clothing e.g. Charles Conder’s coat.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#GenderIdentity -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#GenderIdentity">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#SocietalInformationObject"/>
+        <rdfs:comment>A type of social identity, which comprises various characteristics and behaviours e.g. preferred pronouns, appearance and dress.</rdfs:comment>
+        <rdfs:comment>I do not know how the persons in my sample would have defined their own gender identities. Where I have assumed a person&apos;s gender identity, this is based on my knowledge of their name, appearance, behaviour, and the social norms of the time in which they lived.</rdfs:comment>
+        <rdfs:label>Gender Identity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#GiftEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#GiftEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Acquisition"/>
+        <rdfs:comment>An event in which something is given and received as a gift.</rdfs:comment>
+        <rdfs:label>Gift (Event)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#GiftGiver -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#GiftGiver">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Giver"/>
+        <rdfs:comment>Gives a gift.</rdfs:comment>
+        <rdfs:label>Gift Giver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#GiftRecipient -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#GiftRecipient">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Recipient"/>
+        <rdfs:comment>Receives a gift.</rdfs:comment>
+        <rdfs:label>Gift Recipient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#GiftRole -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#GiftRole">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Commodity"/>
+        <rdfs:comment>A commdity that is given and received as a gift.</rdfs:comment>
+        <rdfs:label>Gift (Role)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#GivenRole -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#GivenRole">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>A role that is defined from the top down.</rdfs:comment>
+        <rdfs:label>Given Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Giver -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Giver">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>Gives something.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Group -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Group">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Agent"/>
+        <rdfs:comment>Multiple people.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#GroupSubject -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#GroupSubject">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Subject"/>
+        <rdfs:comment>The subject of a group portrait.</rdfs:comment>
+        <rdfs:label>Group (Subject)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Host -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Host">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Support"/>
+        <rdfs:comment>Hosts an event during portrait production.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#IndividualSubject -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#IndividualSubject">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Subject"/>
+        <rdfs:comment>The subject of a portrait of a single person.</rdfs:comment>
+        <rdfs:label>Individual (Subject)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#InformationObject -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#InformationObject">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Object"/>
+        <rdfs:comment>An abstract object that exists to make sense of other objects that exist in the world, e.g. by categorising them.</rdfs:comment>
+        <rdfs:label>Information Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Initiator -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Initiator">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#DecisionMaker"/>
+        <rdfs:comment>Initiates the portrait production event (determines that the event takes place).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Internal -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Internal">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitInception"/>
+        <rdfs:comment>An event in which the maker of a portrait decides to make said portrait, without any external request.</rdfs:comment>
+        <rdfs:label>Internal (Ambition)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Lender -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Lender">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Giver"/>
+        <rdfs:comment>Lends something.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Letter -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Letter">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#LiteraryWork"/>
+        <rdfs:comment>A literary work that communicates from one address to another.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#LiteraryEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#LiteraryEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event that is relevant to the domain of literature.</rdfs:comment>
+        <rdfs:label>Literary Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#LiteraryWork -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#LiteraryWork">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Object"/>
+        <rdfs:comment>A particular text e.g. Augustus John&apos;s autobiography.</rdfs:comment>
+        <rdfs:comment>It is the content of the portrait-sitting accounts that holds the most interest for this art-historical study, rather than the way in which the accounts are presented, for example, in manuscript, print or digital form.</rdfs:comment>
+        <rdfs:label>Literary Work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#LiteraryWorkProduction -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#LiteraryWorkProduction">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event in which a literary work is produced.</rdfs:comment>
+        <rdfs:label>Literary Work Production</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#LoanEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#LoanEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Acquisition"/>
+        <rdfs:comment>An event in which something is lent and borrowed.</rdfs:comment>
+        <rdfs:label>Loan (Event)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#LoanRole -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#LoanRole">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Commodity"/>
+        <rdfs:comment>A commodity that is lent and borrowed.</rdfs:comment>
+        <rdfs:label>Loan (Role)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Location -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Location">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Factor"/>
+        <rdfs:comment>A space that is used in some way.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#LocationInEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#LocationInEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Location"/>
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Logistics"/>
+        <rdfs:comment>The site of portrait production.</rdfs:comment>
+        <rdfs:label>Location (in Event)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Logistics -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Logistics">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Factor"/>
+        <rdfs:comment>A factor that affects the logistics of portrait production, for example, when and where an event takes place.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Maker -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Maker">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Actor"/>
+        <rdfs:comment>Constructs part or all of the portrait object, for example, by drawing, painting, varnishing, casting.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#MarkMakingStyle -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#MarkMakingStyle">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#InformationObject"/>
+        <rdfs:comment>Describes the way in which a maker of an art object has applied or handled the medium.</rdfs:comment>
+        <rdfs:label>Mark-Making Style</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Medal -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Medal">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Sculpture"/>
+        <rdfs:comment>A coin or disc-like sculpture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Mediator -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Mediator">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Support"/>
+        <rdfs:comment>Mediates between two or more parties in portrait production.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Medium -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Medium">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#InformationObject"/>
+        <rdfs:comment>Describes a set of materials that are used to make an art object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Memo -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Memo">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#LiteraryWork"/>
+        <rdfs:comment>A literary work that notifies or reminds.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Model -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Model">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Actor"/>
+        <rdfs:comment>Is present for the purpose of being drawn, painted or sculpted from. The model typically acts in a way that aids this purpose (for example, by posing).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#MusicEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#MusicEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event that is relevant to the domain of music.</rdfs:comment>
+        <rdfs:label>Music Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#NonEssentialRole -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#NonEssentialRole">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>A role, without which an event (or a recognisable version of that event) could still take place.</rdfs:comment>
+        <rdfs:label>Non-Essential Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Object -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Object">
+        <owl:disjointWith rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>An endurant object. It may be actual and tangible, such as a painting, or abstract and intangible, such as a socio-economic group.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Observer -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Observer">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>Observes portrait production.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Occupation -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Occupation">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#SocietalInformationObject"/>
+        <rdfs:comment>A type of professional grouping that depends on a person&apos;s training and the activities that they perform routinely.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Opinion -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Opinion">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#SubjectiveEvent"/>
+        <rdfs:comment>A state of events that is believed by someone.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Organisation -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Organisation">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Agent"/>
+        <rdfs:comment>A person or group who acts as a body such as a society or company.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Outbuilding -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Outbuilding">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Painting -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Painting">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:comment>An art object made by arranging paint on a surface.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Person -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Person">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Agent"/>
+        <rdfs:comment>The endurant person.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PersonRole -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PersonRole">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#AgentRole"/>
+        <rdfs:comment>The perdurant person.</rdfs:comment>
+        <rdfs:label>Person Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PersonalEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PersonalEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event that is relevant to someone’s personal life.</rdfs:comment>
+        <rdfs:label>Personal Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PoliticalEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PoliticalEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event that is relevant to the domain of politics.</rdfs:comment>
+        <rdfs:label>Political Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PortraitAcquisition -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PortraitAcquisition">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Acquisition"/>
+        <rdfs:comment>An event in which a portrait object is given and received.</rdfs:comment>
+        <rdfs:label>Portrait Acquisition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PortraitConstruction -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PortraitConstruction">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitProduction"/>
+        <rdfs:comment>An event in which a portrait object is made.</rdfs:comment>
+        <rdfs:label>Portrait Construction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PortraitInception -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PortraitInception">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitProduction"/>
+        <rdfs:comment>An event in which it is decided to produce a portrait.</rdfs:comment>
+        <rdfs:label>Portrait Inception</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PortraitObject -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PortraitObject">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:comment>An art object that functions, or has ever functioned, as a representation of a particular person.</rdfs:comment>
+        <rdfs:label>Portrait Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PortraitProduction -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PortraitProduction">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event in which a portrait is produced, from the idea to the final product.</rdfs:comment>
+        <rdfs:label>Portrait Production</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PortraitReception -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PortraitReception">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event in which a portrait object is seen and interpreted.</rdfs:comment>
+        <rdfs:label>Portrait Reception</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PortraitReview -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PortraitReview">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitProduction"/>
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitReception"/>
+        <rdfs:comment>An event in which a portrait-in-progress is presented for approval.</rdfs:comment>
+        <rdfs:label>Portrait Review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PortraitSitting -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PortraitSitting">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#PortraitConstruction"/>
+        <rdfs:comment>An event in which at least one party acts as a maker and at least one party acts as a model.</rdfs:comment>
+        <rdfs:label>Portrait-Sitting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PortraitSittingAccount -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PortraitSittingAccount">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#InformationObject"/>
+        <rdfs:comment>A text that I have selected as evidence of a portrait production event, and its metadata.</rdfs:comment>
+        <rdfs:label>Portrait-Sitting Account</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PortraitSittingRecord -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PortraitSittingRecord">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#InformationObject"/>
+        <rdfs:comment>A record in the portrait-sitting database.</rdfs:comment>
+        <rdfs:label>Portrait-Sitting Record</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Pose -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Pose">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Factor"/>
+        <rdfs:comment>The position of a body, which may be taken and held deliberately.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PoseInEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PoseInEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Logistics"/>
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Pose"/>
+        <rdfs:comment>The position adopted by a model in portrait production.</rdfs:comment>
+        <rdfs:label>Pose (in Event)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PoseInPicture -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PoseInPicture">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Design"/>
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Pose"/>
+        <rdfs:comment>The position adopted by a subject in a portrait.</rdfs:comment>
+        <rdfs:label>Pose (in Picture)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Position -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Position">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Object"/>
+        <rdfs:comment>Describes how the body is held.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PotentialCommodity -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PotentialCommodity">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Commodity"/>
+        <rdfs:comment>Has potential to be given and received.</rdfs:comment>
+        <rdfs:label>Potential Commodity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PotentialGiver -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PotentialGiver">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Giver"/>
+        <rdfs:comment>Has potential to give something.</rdfs:comment>
+        <rdfs:label>Potential Giver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PotentialRecipient -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PotentialRecipient">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Recipient"/>
+        <rdfs:comment>Has potential to receive something.</rdfs:comment>
+        <rdfs:label>Potential Recipient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PressArticle -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PressArticle">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#LiteraryWork"/>
+        <rdfs:comment>A literary work that is published in a newspaper or magazine.</rdfs:comment>
+        <rdfs:label>Press Article</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Product -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Product">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>Is produced.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Prop -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Prop">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Factor"/>
+        <rdfs:comment>An accompanying object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PropInEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PropInEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Logistics"/>
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Prop"/>
+        <rdfs:comment>An object that accompanies the model in portrait production.</rdfs:comment>
+        <rdfs:label>Prop (in Event)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PropInPicture -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PropInPicture">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Design"/>
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Prop"/>
+        <rdfs:comment>An object that accompanies the subject in a portrait.</rdfs:comment>
+        <rdfs:label>Prop (in Picture)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#PurchaseRole -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#PurchaseRole">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Commodity"/>
+        <rdfs:comment>A commodity that is bought and sold.</rdfs:comment>
+        <rdfs:label>Purchase (Role)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Purpose -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Purpose">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Factor"/>
+        <rdfs:comment>The way in which a portrait is used.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#RealisedEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#RealisedEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event that takes place.</rdfs:comment>
+        <rdfs:label>Realised Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#RealisedRole -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#RealisedRole">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://data.open.ac.uk/ontology/pse#Role"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://data.open.ac.uk/ontology/pse#roleIn"/>
+                        <owl:someValuesFrom rdf:resource="http://data.open.ac.uk/ontology/pse#RealisedEvent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A role in an event that takes place.</rdfs:comment>
+        <rdfs:label>Realised Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Recipient -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Recipient">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>Receives something.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Residence -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Residence">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Location"/>
+        <rdfs:comment>A living space.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Role -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Role">
+        <rdfs:comment>A perdurant object, which lasts for the duration of an event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Room -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Room">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#SaleEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#SaleEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Acquisition"/>
+        <rdfs:comment>An event in which something is bought and sold.</rdfs:comment>
+        <rdfs:label>Sale (Event)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Schedule -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Schedule">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Logistics"/>
+        <rdfs:comment>Underpins the timings of an event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Sculpture -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Sculpture">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#ArtObject"/>
+        <rdfs:comment>An art object made by fashioning material in three dimensions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Seated -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Seated">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Pose"/>
+        <owl:disjointWith rdf:resource="http://data.open.ac.uk/ontology/pse#Standing"/>
+        <rdfs:comment>A seated pose.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Security -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Security">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Asset"/>
+        <rdfs:comment>Confidence in a situation such as a job, relationship, or financial position.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Seller -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Seller">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Giver"/>
+        <rdfs:comment>Sells something.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Setting -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Setting">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Design"/>
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Location"/>
+        <rdfs:comment>The location represented in a portrait.</rdfs:comment>
+        <rdfs:label>Setting (Location in Picture)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Sitter -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Sitter">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#GivenRole"/>
+        <rdfs:comment>The named sitter in a portrait.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#SocialEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#SocialEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event that is relevant to the domain of societies and social behaviour.</rdfs:comment>
+        <rdfs:label>Social Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#SocietalInformationObject -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#SocietalInformationObject">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#InformationObject"/>
+        <rdfs:comment>An abstract object that exists to make sense of the activities and behaviours of people in societies.</rdfs:comment>
+        <rdfs:comment>This class might also encompass knowledge about race, ethnicity, disability and sexual identity. These dimensions of social identity are not included in my ontology because of limited diversity within the sample, or limited evidence.</rdfs:comment>
+        <rdfs:label>Societal Information Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#SocioEconomicGroup -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#SocioEconomicGroup">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#SocietalInformationObject"/>
+        <rdfs:comment>A type of social grouping that denotes a person or persons&apos; access to opportunities, which depends on social and economic privilege.</rdfs:comment>
+        <rdfs:label>Socio-Economic Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Space -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Space">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Object"/>
+        <rdfs:comment>A space in the world, for example, a room, a street, a city. Unlike the class Location, it is defined by its physical features, rather than its use.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Standing -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Standing">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Pose"/>
+        <rdfs:comment>A standing pose.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Status -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Status">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Asset"/>
+        <rdfs:comment>Importance in the eyes of others.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Studio -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Studio">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Location"/>
+        <rdfs:comment>An artist’s workplace.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Subject -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Subject">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Design"/>
+        <rdfs:comment>- The class Subject is defined from the bottom-up, by looking at the portrait, whereas the class Sitter is defined from the top-down, by considering who is named in this role. 
+- The Subject of a portrait can be a single person or a group of people. However, the Sitter is always an individual; a group portrait has multiple sitters.</rdfs:comment>
+        <rdfs:comment>The subject of a portrait, presumably the sitter or sitters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#SubjectiveEvent -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#SubjectiveEvent">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Event"/>
+        <rdfs:comment>An event that exists in someone’s mind, such as an expectation or opinion.</rdfs:comment>
+        <rdfs:label>Subjective Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#SumOfMoney -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#SumOfMoney">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Asset"/>
+        <rdfs:comment>An amount of money.</rdfs:comment>
+        <rdfs:label>Sum of Money</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Supplier -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Supplier">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Support"/>
+        <rdfs:comment>Supplies something that is used in portrait production.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Support -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Support">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Actor"/>
+        <rdfs:comment>A supporting role in portrait production.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Term -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Term">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Role"/>
+        <rdfs:comment>Is agreed upon in an agreement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Tie -->
+
+    <owl:Class rdf:about="http://data.open.ac.uk/ontology/pse#Tie">
+        <rdfs:subClassOf rdf:resource="http://data.open.ac.uk/ontology/pse#Garment"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Brighter -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#Brighter">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#ColourPalette"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Darker -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#Darker">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#ColourPalette"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Extant -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#Extant">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#ConditionState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#FIGFullLength -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#FIGFullLength">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#FormatFigure"/>
+        <rdfs:label>Format (Figure) - Full Length</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#FIGHalfLength -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#FIGHalfLength">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#FormatFigure"/>
+        <rdfs:label>Format (Figure) - Half Length</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#FIGHeadHeadAndShoulders -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#FIGHeadHeadAndShoulders">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#FormatFigure"/>
+        <rdfs:label>Format (Figure) - Head or Head and Shoulders</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#FIGThreeQuarterLength -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#FIGThreeQuarterLength">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#FormatFigure"/>
+        <rdfs:label>Format (Figure) - Three-Quarter Length</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Female -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#Female">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#GenderIdentity"/>
+        <rdfs:comment>My ontology does not list all possible gender identities. Rather, I include those gender identities that I encountered in my sample. The same can be said of other classes in the ontology, for example, Occupation.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Finished -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#Finished">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#FinishedState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#LessVisible -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#LessVisible">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#MarkMakingStyle"/>
+        <rdfs:label>Less Visible</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#MED001 -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#MED001">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#Medium"/>
+        <rdfs:label>Medium 001 - Oil on Canvas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Male -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#Male">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#GenderIdentity"/>
+        <rdfs:comment>My ontology does not list all possible gender identities. Rather, I include those gender identities that I encountered in my sample. The same can be said of other classes in the ontology, for example, Occupation.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#MoreVisible -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#MoreVisible">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#MarkMakingStyle"/>
+        <rdfs:label>More Visible</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#NonExtant -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#NonExtant">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#ConditionState"/>
+        <rdfs:label>Non-Extant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#OCC001 -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#OCC001">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#Occupation"/>
+        <rdfs:label>Occupation 001 - Newspaper Proprietor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#OCC002 -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#OCC002">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#Occupation"/>
+        <rdfs:label>Occupation 002 - Prime Minister</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#POS001 -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#POS001">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#Position"/>
+        <rdfs:label>Position 001 - Standing, Hand on Hip</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#SIZFullLength -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#SIZFullLength">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#FormatSize"/>
+        <rdfs:label>Format (Size) - Full Length</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#SIZHalfLength -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#SIZHalfLength">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#FormatSize"/>
+        <rdfs:label>Format (Size) - Half Length</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#SIZKitCat -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#SIZKitCat">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#FormatSize"/>
+        <rdfs:label>Format (Size) - Kit-Cat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#SIZThreeQuarterLength -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#SIZThreeQuarterLength">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#FormatSize"/>
+        <rdfs:label>Format (Size) - Three-Quarter Length</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#SOC001 -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#SOC001">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#SocioEconomicGroup"/>
+        <rdfs:label>Middle Class</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.open.ac.uk/ontology/pse#Unfinished -->
+
+    <owl:NamedIndividual rdf:about="http://data.open.ac.uk/ontology/pse#Unfinished">
+        <rdf:type rdf:resource="http://data.open.ac.uk/ontology/pse#FinishedState"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
