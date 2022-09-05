@@ -1,5 +1,5 @@
 # pse
-Portrait Sitting Ontology
+Portrait-Sitting Ontology
 
 Work in progress.
 
