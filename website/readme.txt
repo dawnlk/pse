@@ -43,7 +43,6 @@ The documentation assumes a Windows operating system.
 #Run the Jinja app
 > python __init__.py
 
-
 -----Generating the static website (step 5)-----
 
 #Create a folder 'StaticSite'. This will be the location of the static website.
