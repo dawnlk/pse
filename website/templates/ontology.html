@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>
+<b style="line-height:2em">Type:</b>
+{{type1L}}
+</p>
+
+{% if domainL == domainL %}   
+<p>
+<b style="line-height:2em">Domain: </b>
+<a href="{{domain_link}}" style="border-color:purple; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em; line-height:2em; white-space:nowrap">{{domainL}}</a>
+</p>
+{% else %}
+{%endif %}
+
+{% if range0L ==range0L %}   
+<p>
+<b style="line-height:2em">Range: </b>
+<a href="{{range0_link}}" style="border-color:purple; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em; line-height:2em; white-space:nowrap">{{range0L}}</a>
+</p>
+{% else %}
+{%endif %}
+
+{% if inverseL == inverseL %}   
+<p>
+<b style="line-height:2em">Inverse: </b>
+<a href="{{inverse_link}}" style="border-color:purple; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em; line-height:2em; white-space:nowrap">{{inverseL}}</a>
+</p>
+{% else %}
+{%endif %}
+
+{% if property0L == property0L %}   
+<p>
+<b style="line-height:2em">Sub-Property of: </b>
+<a href="{{property0_link}}" style="border-color:purple; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em; line-height:2em; white-space:nowrap">{{property0L}}</a>
+</p>
+{% else %}
+{%endif %}
+	
+{% if class0L ==class0L%}   
+<p>
+<b style="line-height:2em">Sub-Class of: </b>
+<a href="{{class0_link}}" style="border-color:purple; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em; line-height:2em; white-space:nowrap">{{class0L}}</a>
+{% else %}
+{%endif %}
+{% if class1L == class1L%}   
+<a href="{{class1_link}}" style="border-color:purple; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em; line-height:2em; white-space:nowrap">{{class1L}}</a>
+{% else %}
+{%endif %}
+{% if class2L == class2L%}   
+<a href="{{class2_link}}" style="border-color:purple; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em; line-height:2em; white-space:nowrap">{{class2L}}</a>
+{% else %}
+{%endif %}
+{% if class3L == class3L%}   
+<a href="{{class3_link}}" style="border-color:purple; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em; line-height:2em; white-space:nowrap">{{class3L}}</a>
+{% else %}
+</p>
+{%endif %}
+
+{% if comment ==comment %}   
+<p>
+<b style="line-height:2em">Comment: </b>
+{{comment}}
+</p>
+{% else %}
+{%endif %}
+
+
+{% endblock %}
