@@ -1,4 +1,4 @@
-Constructing the Portrait-Sitting Database Website 
+#Constructing the Portrait-Sitting Database Website 
 
 The Portrait-Sitting Database website (www.portrait-sitting.co.uk) is one product of a 3-month placement with the Knowledge Media Institute. The aim of the placement project was to develop a method of publishing structured data (specifically, RDF linked data) in a user-friendly website format. I used my own research data, on the subject of portraiture and the portrait-sitting, as a case study for this work.
 
@@ -21,7 +21,9 @@ Steps 1, 2 and 3 may be considered pre-requisites for the construction of a data
 
 The documentation assumes a Windows operating system.
 
------Generating the dynamic website (step 4)-----
+##Generating the dynamic website (step 4)
+
+```
 
 #Create a folder 'DynamicSite'. This will be the location of the Jinja application and spreadsheets.
 
@@ -43,7 +45,11 @@ The documentation assumes a Windows operating system.
 #Run the Jinja app
 > python __init__.py
 
------Generating the static website (step 5)-----
+```
+
+##Generating the static website (step 5)
+
+```
 
 #Create a folder 'StaticSite'. This will be the location of the static website.
 
@@ -63,3 +69,5 @@ try {
 Invoke-WebRequest -uri $fullpglink -outfile ('StaticSite\'+$fullpglink.Replace('http://localhost:5000','').Replace('/','\'))}
 catch {add-content -path StaticSite\log.txt -Value $fullpglink}
 }         
+
+```
