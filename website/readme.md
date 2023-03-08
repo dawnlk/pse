@@ -1,4 +1,4 @@
-#Constructing the Portrait-Sitting Database Website 
+# Constructing the Portrait-Sitting Database Website 
 
 The Portrait-Sitting Database website (www.portrait-sitting.co.uk) is one product of a 3-month placement with the Knowledge Media Institute. The aim of the placement project was to develop a method of publishing structured data (specifically, RDF linked data) in a user-friendly website format. I used my own research data, on the subject of portraiture and the portrait-sitting, as a case study for this work.
 
@@ -21,10 +21,9 @@ Steps 1, 2 and 3 may be considered pre-requisites for the construction of a data
 
 The documentation assumes a Windows operating system.
 
-##Generating the dynamic website (step 4)
+## Generating the dynamic website (step 4)
 
 ```
-
 #Create a folder 'DynamicSite'. This will be the location of the Jinja application and spreadsheets.
 
 #Create a sub-folder 'DynamicSite\templates'. This will be the location of the Jinja templates.
@@ -47,10 +46,9 @@ The documentation assumes a Windows operating system.
 
 ```
 
-##Generating the static website (step 5)
+## Generating the static website (step 5)
 
 ```
-
 #Create a folder 'StaticSite'. This will be the location of the static website.
 
 #Create sub-folders 'StaticSite\account', 'StaticSite\artobject', 'StaticSite\artobjectrole', 'StaticSite\event', 'StaticSite\eventrole', 'StaticSite\informationobject', 'StaticSite\object', 'StaticSite\objectrole', 'StaticSite\record', 'StaticSite\source', 'StaticSite\term'
