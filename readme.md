@@ -6,11 +6,11 @@ A portrait-sitting is a moment of interaction between an artist, a sitter (the p
 
 ## What is the portrait-sitting database?
 
-The Portrait-Sitting Database is a collection of information about portrait-sittings, specifically, sittings for British portraits 1900-1960 and, predominantly, portraits in the National Portrait Gallery. You can browse the database at www.portrait-sitting.co.uk
+The portrait-sitting database is a collection of information about portrait-sittings, specifically, sittings for British portraits 1900-1960 and, predominantly, portraits in the National Portrait Gallery. You can browse the database at www.portrait-sitting.co.uk
 
 ## What is the portrait-sitting ontology?
 
-The Portrait-Sitting Ontology is a formal specification of the objects, concepts and relationships that make up knowledge about portrait-sittings. It is the framework, according to which the data in the Portrait-Sitting Database has been structured.
+The portrait-sitting ontology is a formal specification of the objects, concepts and relationships that make up knowledge about portrait-sittings. It is the framework, according to which the data in the portrait-sitting database has been structured.
 
 ## Who is behind this project?
 
