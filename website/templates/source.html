@@ -3,15 +3,15 @@
 {% block content %}
 
 <p>
-<b style="line-height:2em">Type:</b>
-<a href="{{type1_link}}" style="border-color:purple; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em;  white-space:nowrap">{{type1L}}</a>  
-<a href="{{type2_link}}" style="border-color:purple; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em;  white-space:nowrap">{{type2L}}</a> 
-<a href="{{type3_link}}" style="border-color:purple; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em;  white-space:nowrap">{{type3L}}</a> 
-{% if type4L ==type4L %}
-<a href="{{type4_link}}" style="border-color:purple; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em;  white-space:nowrap">{{type4L}}</a> 
+<a href="{{type1_link}}" style="border-color:#f1f3f2; background-color:#f1f3f2; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em; line-height:2em; black-space:nowrap">{{type1L}}</a>
+<a href="{{type2_link}}" style="border-color:#f1f3f2; background-color:#f1f3f2; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em; line-height:2em; black-space:nowrap">{{type2L}}</a>
+<a href="{{type3_link}}" style="border-color:#f1f3f2; background-color:#f1f3f2; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em; line-height:2em; black-space:nowrap">{{type3L}}</a>
+{% if type4L==type4L %} 
+<a href="{{type4_link}}" style="border-color:#f1f3f2; background-color:#f1f3f2; color:black; border-style:solid; border-width:2px; text-decoration:none; padding:0.2em; line-height:2em; black-space:nowrap">{{type4L}}</a>
 {% else %}
 {%endif %}
 </p>
+<br>
 
 {% if title ==title %}   
 <p>
@@ -126,10 +126,10 @@
 {% else %}
 {%endif %}
 
-{% if URLdate ==URLdate %}   
+{% if dateURLAccessed ==dateURLAccessed %}   
 <p>
 <b style="line-height:2em"><a href="/term/hasAccessedDate" style="color:black">Date URL Accessed:</a></b>
-{{URLdate}}
+{{dateURLAccessed}}
 </p>
 {% else %}
 {%endif %}

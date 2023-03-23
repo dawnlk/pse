@@ -1366,15 +1366,15 @@ def objectrole(IRI):
     else:
       sameEntity2=object_role_data['FAILSAFE'] 
     if object_role[157]==object_role[157]:
-       factor8=object_role[157]
+       factor8=event_role_data[object_role[157]]
     else:
        factor8=event_role_data['FAILSAFE']
     if object_role[158]==object_role[158]:
-       factor9=object_role[158]
+       factor9=event_role_data[object_role[158]]
     else:
        factor9=event_role_data['FAILSAFE']
     if object_role[159]==object_role[159]:
-       factor10=object_role[159]
+       factor10=event_role_data[[object_role[159]]
     else:
        factor10=event_role_data['FAILSAFE']
     
@@ -2077,7 +2077,7 @@ def event(IRI):
     else:
        eventRole5=event_role_data['FAILSAFE']
     if event[254]==event[254]:
-       eventRole6=event_drole_ata[event[254]]
+       eventRole6=event_role_data[event[254]]
     else:
        eventRole6=event_role_data['FAILSAFE']
     if event[255]==event[255]:
