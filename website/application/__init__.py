@@ -2081,7 +2081,7 @@ def event(IRI):
     else:
        eventRole6=event_role_data['FAILSAFE']
     if event[255]==event[255]:
-       eventRole7=event_data[event[255]]
+       eventRole7=event_role_data[event[255]]
     else:
        eventRole7=event_role_data['FAILSAFE']     
       
