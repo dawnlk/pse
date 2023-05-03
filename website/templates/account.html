@@ -44,7 +44,13 @@
 {% endif %}
 
 <p>
-<b style="line-height:2em"><a href="/term/hasText" style="color:black">Text:</a></b> {{text}}
+<b style="line-height:2em"><a href="/term/hasText" style="color:black">Text:</a></b>
+{% set truncatedtext = text.split( ) %}
+{{(truncatedtext)[:400]|join(" ")}}
+{% if truncatedtext|length > 400 %}
+... [Truncated due to copyright]
+{% else %}
+{% endif %}
 </p>
 
 
